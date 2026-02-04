@@ -14,9 +14,14 @@ jobs:
   sync-two-repos-and-process:
     runs-on: ubuntu-latest
     steps:
-      # 步骤1：检出当前仓库（用于后续提交文件）
+      # 步骤1：检出当前仓库（用于后续提交文件，添加推送权限）
       - name: 检出当前仓库
         uses: actions/checkout@v4
+        with:
+          # 关联仓库密钥GH_PAT，获取推送权限（解决403错误）
+          token: ${{ secrets.GH_PAT }}
+          # 检出main分支（确保和你的仓库默认分支一致，若为master请修改）
+          ref: main
 
       # ==================== 处理第一个仓库（原有逻辑：提取最后一个代码块→1.txt） ====================
       - name: 处理仓库1：提取最后一个代码块生成1.txt
