@@ -22,7 +22,7 @@ jobs:
       - name: 处理仓库1：提取最后一个代码块生成1.txt
         run: |
           # 配置仓库1信息（REPO1_URL替换为你的目标仓库地址）
-          REPO1_URL= "https://github.com/free-nodes/v2rayfree"
+          REPO1_URL="https://github.com/free-nodes/v2rayfree"
           REPO1_TEMP_DIR="temp-repo1"
           REPO1_OUTPUT="1.txt"
 
@@ -68,7 +68,7 @@ jobs:
       - name: 处理仓库2：自定义逻辑生成2.txt
         run: |
           # 配置仓库2信息（替换为你的目标仓库地址）
-          REPO1_URL= "https://github.com/free-nodes/v2rayfree"
+          REPO1_URL="https://github.com/free-nodes/v2rayfree"
           REPO1_TEMP_DIR="temp-repo1"
           REPO1_OUTPUT="2.txt"
 
