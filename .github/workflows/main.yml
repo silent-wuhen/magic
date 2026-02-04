@@ -70,7 +70,7 @@ jobs:
           # 配置仓库2信息（替换为你的目标仓库地址）
           REPO1_URL= "https://github.com/free-nodes/v2rayfree" # "<仓库1的GitHub地址>"
           REPO1_TEMP_DIR="temp-repo1"
-          REPO1_OUTPUT="1.txt"
+          REPO1_OUTPUT="2.txt"
 
           # 1. 克隆仓库1（仅最新版本，提速）
           git clone --depth 1 $REPO1_URL $REPO1_TEMP_DIR
